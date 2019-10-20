@@ -1,0 +1,11 @@
+{
+  "name": "challenge-project",
+  "version": "0.1.0",
+  "description": "Challenge project",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "author": "Paulo Gabriel",
+  "license": "ISC"
+}
