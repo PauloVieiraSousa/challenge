@@ -19,15 +19,22 @@ jobs:
     steps:
       - checkout
 
-      - restore_cache
-        keys:
-          - v1-dependencies-{{ checksum "package.json" }}
-          - v1-depedencies-
+      - run: echo "CircleCI started"
 
-      - run: npm install
+      - restore_cache
+          keys:
+            - v1-dependencies-{{ checksum "package.json" }}
+            - v1-depedencies-
+
+      - run:
+          name: Install!
+          command: npm install
+
       - save_cache:
           paths:
             - node_modules
           key: v1-dependencies-{{ checksum "package.json" }}
 
-      - run: npm test
+      - run:
+          name: Jest
+          command: npm test
