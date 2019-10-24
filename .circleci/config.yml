@@ -21,7 +21,7 @@ jobs:
 
       - run: echo "CircleCI started"
 
-      - restore_cache
+      - restore_cache:
           keys:
             - v1-dependencies-{{ checksum "package.json" }}
             - v1-depedencies-
