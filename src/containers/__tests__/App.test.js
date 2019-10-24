@@ -10,6 +10,6 @@ beforeEach( () => {
 })
 
 it('Sample Test', () => {
-    expect(wrapped.find(App).length).toEqual(0);
+    expect(wrapped.find(App).length).toEqual(1);
 });
 
